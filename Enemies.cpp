@@ -106,7 +106,7 @@ void Enemies :: remove_destroyed(int y,int x){
 	while(size--){
 		pair<int,int> soldier = army.front();
 		army.pop_front();
-		if(soldier.first != y && soldier.second != x){
+		if(soldier.first != y || soldier.second != x){
 			army.push_back(soldier);
 		}
 	}
